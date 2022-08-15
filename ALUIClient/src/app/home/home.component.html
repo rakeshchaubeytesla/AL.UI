@@ -1,0 +1,30 @@
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/" >Portfolio Managment</a>
+          <ul class="navbar-nav me-auto mb-2 mb-md-0" >
+            <ng-container >
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/DashBoard" routerLinkActive='active' aria-current="page">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive='active' routerLink="/stockList">Stock List</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive='active' routerLink="/messages">Index List</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="logout()">Logout</a>
+              </li>
+            </ng-container>
+          </ul>
+          <div clas ="dropdown"  dropdown>
+            <a href="" class="dropdown-toggle text-light" dropdownToggle>Welcome Rakesh</a>
+            <a href="" class="dropdown-toggle text-light" (click)="logout()">Logout</a>
+            <div class="dropdown-menu mt-3" *dropdownMenu>
+              <a class="dropdown-item">Edit Profile</a>
+                <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="logout()">Logout</a>
+            </div>
+          </div>
+      </div>
+</nav>
